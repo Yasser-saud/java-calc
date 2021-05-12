@@ -11,4 +11,14 @@ public class Calc {
         System.out.println(result + res);
     }
 
+    public void multiply (float a, float b){
+        float res = a * b;
+        System.out.println(result + res);
+
+    }
+
+    public void divide (float a, float b){
+        float res = a / b;
+        System.out.println(result + res );
+    }
 }

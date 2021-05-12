@@ -16,7 +16,7 @@ public class Main {
             System.out.println("Welcome! 😊 \nPlease use the number corresponding for the action you want.");
 
             // options
-            System.out.println(" 1 - sum two numbers \n 2 - subtract two numbers\n 3 - Exit");
+            System.out.println(" 1 - sum two numbers \n 2 - subtract two numbers \n 3 - multiply two numbers \n 4 - divide two numbers \n 5 - Exit");
 
             // input
             if(s.hasNextInt()){
@@ -29,12 +29,12 @@ public class Main {
                 continue;
             }
 
-            if( userInput > 3){
+            if( userInput > 5){
                 System.err.println("The number you entered is out of the range! \n Restarting...");
                 continue;
             }
 
-            else if( userInput == 3){
+            else if( userInput == 5){
                 System.out.println("Exiting...");
                 break;
             }
@@ -60,10 +60,15 @@ public class Main {
                 if(userInput == 1){
                     calc.sum(a, b);
                 }
-                else{
+                else if(userInput == 2){
                     calc.subtract(a, b);
                 }
-
+                else if(userInput == 3){
+                    calc.multiply(a, b);
+                }
+                else {
+                    calc.divide(a, b);
+                }
 
                 while (true){
                     try {
@@ -87,6 +92,7 @@ public class Main {
                 }
             }
         }
+
     }
 
 }
